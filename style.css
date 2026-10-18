@@ -1,0 +1,473 @@
+
+/* Pengaturan dasar seluruh halaman */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f1f5f9;
+}
+
+/* Header dan navigasi */
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian perkenalan */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px;
+}
+
+.hero-text {
+    flex: 1 1 280px;
+}
+
+.hero-text h2 {
+    margin-bottom: 16px;
+    color: #1e3a8a;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1 1 240px;
+    text-align: center;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: auto;
+    border-radius: 16px;
+}
+
+.button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Penyesuaian untuk layar HP */
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero-image img {
+        max-width: 240px;
+    }
+}
+
+
+/* Halaman Biodata */
+.biodata-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 24px;
+}
+
+.biodata-container section {
+    margin-bottom: 30px;
+}
+
+.biodata-container h2 {
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.biodata-container h3 {
+    margin: 16px 0 8px;
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile div {
+    flex: 1 1 280px;
+}
+
+.biodata-container ul,
+.biodata-container ol {
+    padding-left: 28px;
+    margin-bottom: 16px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .biodata-container {
+        padding: 16px;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile img {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+
+/* Tabel Hobi */
+.hobi-section {
+    margin: 30px 0;
+}
+
+.hobi-section > p {
+    margin-bottom: 16px;
+}
+
+.hobi-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.hobi-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.hobi-table th {
+    background: #1e3a8a;
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+.hobi-table td {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+.hobi-table tbody tr:nth-child(even) {
+    background: #eff6ff;
+}
+
+.hobi-table tbody tr:hover {
+    background: #dbeafe;
+}
+
+.hobi-table .hobi-icon {
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .hobi-table th,
+    .hobi-table td {
+        padding: 9px;
+        font-size: 13px;
+    }
+
+    .hobi-table .hobi-icon {
+        font-size: 24px;
+    }
+}
+
+
+
+/* Halaman My Holiday */
+.holiday-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+.holiday-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.holiday-intro h2 {
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.holiday-intro p {
+    line-height: 1.7;
+}
+
+.holiday-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.holiday-gallery figure {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.holiday-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.holiday-gallery figcaption {
+    padding: 14px;
+    text-align: center;
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .holiday-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .holiday-container {
+        padding: 20px 14px;
+    }
+
+    .holiday-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .holiday-gallery img {
+        height: 240px;
+    }
+}
+
+
+/* =========================
+   CONTACT ME PAGE
+========================= */
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 24px;
+}
+
+.contact-intro {
+    margin-bottom: 28px;
+}
+
+.contact-intro h2 {
+    color: #21418d;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-intro p {
+    line-height: 1.8;
+    max-width: 850px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h2 {
+    color: #21418d;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-card label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #c8d1e0;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.contact-card textarea {
+    resize: vertical;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    outline: 2px solid #21418d;
+    outline-offset: 1px;
+}
+
+.contact-button {
+    margin-top: 12px;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #21418d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contact-button:hover {
+    background: #172f6b;
+}
+
+.contact-item {
+    margin-bottom: 22px;
+}
+
+.contact-item h3 {
+    color: #21418d;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: #21418d;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    background: #eef3fc;
+    padding: 14px;
+    border-left: 4px solid #21418d;
+    border-radius: 6px;
+    line-height: 1.7;
+}
+
+/* Responsive untuk tablet dan HP */
+@media (max-width: 700px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        padding: 24px 16px;
+    }
+
+    .contact-card {
+        padding: 18px;
+    }
+
+    .contact-intro h2 {
+        font-size: 26px;
+    }
+}
